@@ -22,11 +22,12 @@ $breakpoints : (
 
 //Paleta de colores
 :root{
-//     ---color: #00A24D;
-//     ---color:#A8CF45;
-//     ---color: #E4735B;
-//     ---color:#333333;
-// 
+
+  --Strong-Cyan: hsl(171, 66%, 44%);
+  --Light-Blue: hsl(233, 100%, 69%);
+
+  --Dark-Grayish-Blue: hsl(210, 10%, 33%):
+  --Grayish-Blue: hsl(201, 11%, 66%);
 }
 
 //Variables de tipografia 
@@ -41,7 +42,7 @@ $breakpoints : (
     --h1-font-size   : 2.5rem;
     --h2-font-size   : 1.75rem;
     --h3-font-size   : 1.5rem;
-    --body-font-size : 1rem;
+    --body-font-size : 18px;
     --small-font-size: .8rem;
   }
 

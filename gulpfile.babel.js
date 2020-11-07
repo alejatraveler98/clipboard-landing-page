@@ -48,8 +48,8 @@ gulp.task('html-min', () => {
 		.src('./src/*.html')
 		.pipe(plumber())
 		.pipe(htmlmin({
-			collapseWhitespace: true,
-			removeComments: true
+			collapseWhitespace: false,
+			removeComments: false
 		}))
 		.pipe(cacheBust({
 			type: 'timestamp'
@@ -110,28 +110,28 @@ gulp.task('clean', () => {
 		.pipe(gulp.dest('./public/styles'))
 })
 
-gulp.task('imgmin', () => {
-	return gulp
-	  .src('./src/images/*')
-	  .pipe(plumber())
-	  .pipe(
-		imagemin([
-		  imagemin.gifsicle({ interlaced: true }),
-		  imagemin.mozjpeg({ quality: 30, progressive: true }),
-		  imagemin.optipng({ optimizationLevel: 1 })
-		])
-	  )
-	  .pipe(gulp.dest('./public/images'));
-  });
+// gulp.task('imgmin', () => {
+// 	return gulp
+// 	  .src('./src/images/*')
+// 	  .pipe(plumber())
+// 	  .pipe(
+// 		imagemin([
+// 		  imagemin.gifsicle({ interlaced: true }),
+// 		  imagemin.mozjpeg({ quality: 30, progressive: true }),
+// 		  imagemin.optipng({ optimizationLevel: 1 })
+// 		])
+// 	  )
+// 	  .pipe(gulp.dest('./public/images'));
+//   });
 
 gulp.task('default', () => {
+	gulp.watch('./src/*.html', gulp.series('html-min')).on('change',browserSync.reload)	
+	gulp.watch('./src/scss/**/*.scss', gulp.series('sass'))
+	//gulp.watch('./src/views/**/*.pug', gulp.series('views')).on('change',browserSync.reload)	
+	gulp.watch('./src/js/*.js', gulp.series('babel')).on('change',browserSync.reload)
 	browserSync.init({
 		server:'./public'
 	})
-	gulp.watch('./src/*.html', gulp.series('html-min')).on('change',browserSync.reload)	
 	//gulp.watch('./src/styles/*.css', gulp.series('styles'))
-	gulp.watch('./src/views/**/*.pug', gulp.series('views')).on('change',browserSync.reload)	
-	gulp.watch('./src/scss/**/*.scss', gulp.series('sass'))
-	gulp.watch('./src/js/*.js', gulp.series('babel')).on('change',browserSync.reload)
 })
 
