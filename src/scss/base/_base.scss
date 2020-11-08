@@ -9,6 +9,7 @@ body{
 }
 
 a{
+    display: block;
     text-decoration: none;
     @include media(medium){
         display: inline-block;
@@ -22,11 +23,12 @@ ul{
 }
 
 img{
-    width:100%
+    width:100%;
 }
 
 h1,h2,h3,h4,h5,h6{
     margin-top: 0;
+    color:var(--Dark-Grayish-Blue);
 }
 
 h1{
@@ -35,4 +37,9 @@ h1{
 
 h2{
     font-size: var(--h2-font-size);
+}
+
+p{
+    color: var(--Grayish-Blue);
+    margin-bottom: 2rem;
 }

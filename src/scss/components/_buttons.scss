@@ -1,0 +1,28 @@
+.button-download{
+    @include flex(column,center,center);
+    @include media(medium){
+         @include flex(row,center,center) 
+    }
+}
+
+.button{
+    padding:1rem;
+    width: 90%;
+    margin-bottom: 1rem;
+    border-radius: 40px;
+    color:white;
+    font-weight: 600;
+    &-iOS{
+       background-color: var(--Strong-Cyan); 
+       @include media(medium){
+            margin-right:1rem; 
+       }
+    }
+    &-Mac{
+        background-color: var(--Light-Blue);
+    }
+
+    @include media(medium){
+         width:20%; 
+    }
+}
