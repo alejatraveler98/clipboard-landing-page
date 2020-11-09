@@ -1,8 +1,37 @@
 .snnipet{
     text-align: center;
+    &-content{
+        @include media(large){
+            @include flex(row,space-between,center);
+              
+        }
+        &__image{
+            margin-bottom: 3rem;
+            padding-left : $padding;
+            padding-right: $padding;
+            margin-left:auto ;
+            margin-right:auto ;
+            @include media(medium){
+                display: block; 
+                width:700px;
+                margin-bottom: 0;
+            }
+        }
+        &__information{
+            @include media(large){
+                padding-left:4rem;
+            }
+
+        }
+        &__information p{
+            @include media(large){
+                width:70%; 
+            }
+        }
+    }
     //Clase para agregar margen en caso de que se necesité que quede pendiente
     &-img{
-
+        margin-bottom:3rem;
     }
 }
 
