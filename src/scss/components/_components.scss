@@ -9,14 +9,16 @@
 } 
 
 [class="workflow-img"]{
-    width:4rem;
+    width:60px;
 }
 
 [src^="/images/logo-"]{
     width:200px;
+    display: block;
+    padding:0 1rem;
 }
 
-[src^="/images/icon-"]{
+[class="footer-icons"]{
     width:20px;
 }
 .footer-logo{

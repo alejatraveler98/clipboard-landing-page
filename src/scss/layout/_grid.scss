@@ -11,6 +11,19 @@
     
 }
 
+.access-information{
+    @include media(large){
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+.access-logo{
+    @include media(large){
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+    }
+}
 .center-responsive{
     text-align: center ;
     @include media(large){

@@ -1,0 +1,10 @@
+.access{
+    &-logo{
+        padding: 4rem;
+    }
+    &-img{
+        @include media(large){
+            width:800px; 
+        }
+    }
+}
