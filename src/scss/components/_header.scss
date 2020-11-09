@@ -1,4 +1,4 @@
-.header{
+    .header{
     text-align: center;
 
     &-logo{
@@ -11,10 +11,5 @@
         font-weight: 600;
     }
 
-    &-paragraph{
-        width:60%;
-        font-size: var(--body-font-size);
-        margin-left:auto;
-        margin-right: auto;
-    } 
+    
 }

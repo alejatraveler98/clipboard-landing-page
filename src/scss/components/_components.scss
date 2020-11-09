@@ -1,0 +1,26 @@
+.paragraph{
+        
+    font-size: var(--body-font-size);
+    @include media(medium){
+        width:60%;
+        margin-left:auto;
+        margin-right: auto;
+    }
+} 
+
+[class="workflow-img"]{
+    width:4rem;
+}
+
+[src^="/images/logo-"]{
+    width:200px;
+}
+
+[src^="/images/icon-"]{
+    width:20px;
+}
+.footer-logo{
+    width:300px;
+    display: block;
+    margin:0 auto;
+}
