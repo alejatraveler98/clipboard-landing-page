@@ -19,6 +19,13 @@
 }
 
 .access-logo{
+    display: grid;
+    justify-content: center;
+    align-items: space-between;
+    grid-template: 1fr;
+    @include media(medium){
+          grid-template-columns: repeat(2,1fr);
+    }
     @include media(large){
         display: grid;
         grid-template-columns: repeat(5,1fr);
