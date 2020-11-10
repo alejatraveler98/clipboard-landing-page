@@ -22,7 +22,14 @@
         background-color: var(--Light-Blue);
     }
 
-    @include media(medium){
-         width:20%; 
+    &-Mac:hover, &-iOS:hover{
+        opacity: 0.9;
+    }
+    
+    @include media(small){
+        // width:60%; 
+    }
+    @include media(large){
+        width:20%; 
     }
 }

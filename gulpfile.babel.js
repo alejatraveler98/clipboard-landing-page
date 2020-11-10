@@ -130,7 +130,9 @@ gulp.task('default', () => {
 	//gulp.watch('./src/views/**/*.pug', gulp.series('views')).on('change',browserSync.reload)	
 	gulp.watch('./src/js/*.js', gulp.series('babel')).on('change',browserSync.reload)
 	browserSync.init({
-		server:'./public'
+		server:'./public',
+		browser:"firefox"
+		
 	})
 	//gulp.watch('./src/styles/*.css', gulp.series('styles'))
 })

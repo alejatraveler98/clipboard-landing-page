@@ -1,14 +1,37 @@
 .footer{
-    display: grid;
-    justify-content: space-between;
-    // grid-template-columns: repeat(3,1fr);
-    grid-template-columns: 1fr 3fr 1fr;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     &-logo{
         width: 3rem;
+        margin-bottom:1rem;
     }
-    &-nav{
+
+    &-nav, &-nav ul{
+        margin-bottom: 1rem;
+    }
+    &-nav ul li{
+        color:var(--Dark-Grayish-Blue);
+        font-weight: 500;
+    }
+    &-nav ul li:hover{
+        color:var(--Strong-Cyan);
+    }
+    
+    @include media(large){
+          
         display: grid;
-        grid-template-columns: repeat(3,1fr);
-        justify-content: start;
+        justify-content: space-between;
+        grid-template-columns: 1fr 3fr 1fr;
+        &-nav{
+            display: grid;
+            grid-template-columns: repeat(3, 200px);
+            justify-content: flex-start;
+        }
+        &-icon{
+            display: grid;
+            grid-template-columns:repeat(3,50px);
+        }
     }
 }
