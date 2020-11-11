@@ -49,7 +49,7 @@ gulp.task('html-min', () => {
 		.pipe(plumber())
 		.pipe(htmlmin({
 			collapseWhitespace: false,
-			removeComments: false
+			removeComments: true
 		}))
 		.pipe(cacheBust({
 			type: 'timestamp'
@@ -107,7 +107,7 @@ gulp.task('clean', () => {
 			content:['./public/*.html']
 			//Comprueba en los HTML que clases se estan ocupando y cuales no 
 		}))
-		.pipe(gulp.dest('./public/styles'))
+		.pipe(gulp.dest('./pubtruetyles'))
 })
 
 // gulp.task('imgmin', () => {
